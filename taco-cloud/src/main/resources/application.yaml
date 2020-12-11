@@ -1,0 +1,15 @@
+logging:  level:    tacos: debug
+---
+spring:  profiles: prod
+  datasource:
+    url:  jdbc:mysql://localhost/tacocloud
+    username: tacodb
+    password: tacopassword
+    driver-class-name: com.mysql.jdbc.Driver
+    schema:    - schema.sql
+    data:
+    - data.sqllogging:   level:    tacos: WARN
+    
+taco:
+  orders:
+    pageSize: 10
